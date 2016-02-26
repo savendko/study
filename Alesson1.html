@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-journal-theme.min.css">
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/countryCtrl.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="countryCtrl">
+			<div class="col-md-8 col-md-offset-2">
+				<h1>{{ country.name }}</h1>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Key</th>
+							<th>Value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Area</td>
+							<td>{{country.area}}</td>
+						</tr>
+							<tr>
+							<td>Population</td>
+							<td>{{country.population}}</td>
+						</tr>
+						<tr>
+							<td>Capital</td>
+							<td>{{country.capital.name}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
